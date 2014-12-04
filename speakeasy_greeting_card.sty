@@ -1,0 +1,86 @@
+\ProvidesPackage{speakeasy_greeting_card}[2014/11/08 SpeakEasy Greeting Card]
+
+% This package provides common options used across greeting cards I create for
+% SpeakEasy as a part of "German in the Working World", taken Fall quarter 2014
+% at Portland State University.
+
+% ------------------------------------------------------------------------------
+
+% COPYRIGHT and LICENSE
+
+% Written in 2014 by Benjamin Johnson.
+
+% To the extent possible under law, the author(s) have dedicated all copyright
+% and related and neighboring rights to this source code to the public domain
+% worldwide. This source code is distributed without any warranty.
+
+% You should have received a copy of the CC0 Public Domain Dedication along with
+% this source code. If not, see
+% <http://creativecommons.org/publicdomain/zero/1.0/>.
+
+% ------------------------------------------------------------------------------
+
+%% PACKAGES and SETTINGS for COLORS
+
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+%% PACKAGES for HYPERLINKS and XMP
+
+\usepackage{hyperref}
+\usepackage{hyperxmp}
+
+\setlength{\XeTeXLinkMargin}{0pt}
+
+%% PACKAGES for FIGURES (IMAGES and TABLES)
+
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{wrapfig}
+
+% QR Code generation for links
+\usepackage{qrcode}
+
+%% PACKAGES and SETTINGS for FONTS
+
+\usepackage{fontspec}
+
+%% PACKAGES and SETTINGS for CARD FORMATTING
+
+\usepackage{gcard}
+
+% US Letter size paper has external dimensions of 21.59 cm by 27.94 cm
+
+\setlength{\gcguttermargin}{10mm} % inside margin, textblock to fold
+\setlength{\gcedgemargin}{10mm} % outside margin, textblock to page edge
+\setlength{\gctopmargin}{10mm} % top margin, textblock to fold/cut
+\setlength{\gcbottommargin}{10mm} % bottom margin, textblock to page edge
+
+% The above margins should leave four panels each 8.795 cm by 11.97 cm
+% Use \panelwidth and \panelheight as needed
+
+%% PACKAGES for DRAWINGS
+
+% Designs may commonly use geometric patterns or complex (non-linear) text
+% layout, which TikZ/pgf provide for.
+
+\usepackage{tikz}%,pgfornament,tikzrput}
+\usetikzlibrary{decorations,decorations.text,lindenmayersystems}
+
+% ------------------------------------------------------------------------------
+
+% Drop-in CC0 public domain dedication
+\newcommand{\ccZeroNotice}{
+  \begin{tabular}{m{1.8cm} m{6.75cm}}
+    \raisebox{-0.5\height}{
+      \href{https://creativecommons.org/publicdomain/zero/1.0/}{
+        \XeTeXLinkBox{\includegraphics[width=2cm]{cc-zero.png}}}}
+    &
+    \setmainfont{Noto Sans}\scriptsize
+    To the extent possible under law, the author(s) have waived
+    all copyright and related or neighboring rights to this work.
+  \end{tabular}
+}
+
+% ------------------------------------------------------------------------------
+
+\endinput

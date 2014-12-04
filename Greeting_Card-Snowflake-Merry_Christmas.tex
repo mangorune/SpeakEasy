@@ -1,0 +1,465 @@
+\documentclass[10pt,letter]{article}
+
+% Multilingual Christmas Greeting Card
+
+% This greeting card was created for SpeakEasy as a part of "German in the
+% Working World", taken Fall quarter 2014 at Portland State University.
+
+% ------------------------------------------------------------------------------
+
+% AUTHORSHIP, COPYRIGHT and LICENSE
+
+% Written in 2014 by Benjamin Johnson.
+
+% To the extent possible under law, the author(s) have dedicated all copyright
+% and related and neighboring rights to this source code to the public domain
+% worldwide. This source code is distributed without any warranty.
+
+% You should have received a copy of the CC0 Public Domain Dedication along with
+% this source code. If not, see
+% <http://creativecommons.org/publicdomain/zero/1.0/>.
+
+% ------------------------------------------------------------------------------
+
+\usepackage{./speakeasy_greeting_card}
+
+\hypersetup{
+  colorlinks={true},
+  linkcolor={black},
+  urlcolor={Black},
+  pdfauthor={Benjamin Johnson},
+  pdfcopyright={To the extent possible under law, the author(s) have waived
+    all copyright and related or neighboring rights to this work.},
+  pdflicenseurl={https://creativecommons.org/publicdomain/zero/1.0/}
+}
+
+% ------------------------------------------------------------------------------
+
+\usepackage{polyglossia}
+
+\setdefaultlanguage{english}
+
+\setotherlanguage{spanish}
+\setotherlanguage{portuges}
+\setotherlanguage{german}
+\setotherlanguage{french}
+\setotherlanguage{vietnamese}
+\setotherlanguage{italian}
+
+% Filipino / Tagalog not supported by Polyglossia. Using generic fontspec macros
+
+\setotherlanguage{russian}
+
+% CJK not supported by Polyglossia.
+\usepackage{xeCJK}
+
+\setotherlanguage{arabic}
+
+%% Typeface choices
+
+\defaultfontfeatures{Ligatures={Common,TeX}}
+
+% Used by any language without another font defined
+\setmainfont{Noto Sans}
+
+% English
+% Used as default language for the document
+\newfontfamily\englishfont[Script=Latin]{Noto Sans}
+
+% Latin scripts, non-English
+
+\newfontfamily\spanishfont[Script=Latin]{Noto Sans}
+\newfontfamily\portuguesefont[Script=Latin]{Noto Sans}
+\newfontfamily\germanfont[Script=Latin]{Noto Sans}
+\newfontfamily\frenchfont[Script=Latin]{Noto Sans}
+\newfontfamily\vietnamesefont[Script=Latin]{Noto Sans}
+\newfontfamily\italianfont[Script=Latin]{Noto Sans}
+
+\newfontfamily\tagalogfont[Script=Latin]{Noto Sans}
+
+% Alphabetic scripts, non-Latin
+\newfontfamily\russianfont[Script=Cyrillic]{Noto Sans}
+
+% Left-to-Right scripts, non-alphabetic
+% (All these are Logographic / Syllabic)
+
+% These modern open source type families are not working due to bugs somewhere
+% in the *TeX pipeline.
+% \setCJKfamilyfont{zhrm}{Noto Sans S Chinese}
+% \setCJKfamilyfont{jarm}{Noto Sans Japanese}
+% \setCJKfamilyfont{korm}{Noto Sans Korean}
+% \setCJKfamilyfont{zhrm}{Source Han Sans CN}
+% \setCJKfamilyfont{jarm}{Source Han Sans JP}
+% \setCJKfamilyfont{korm}{Source Han Sans KR}
+
+\setCJKfamilyfont{zhrm}{DFKai-SB}
+\setCJKfamilyfont{jarm}{Yu Mincho}
+\setCJKfamilyfont{korm}{UnBatang}
+
+\newcommand\chinesefont{\CJKfamily{zhrm}\CJKnospace}
+\newcommand\japanesefont{\CJKfamily{jarm}\CJKnospace}
+\newcommand\koreanfont{\CJKfamily{korm}\CJKspace}
+
+% Right-to-Left scripts
+
+\newfontfamily\arabicfont[Script=Arabic]{Noto Naskh Arabic}
+
+% ------------------------------------------------------------------------------
+
+%% Language native names
+
+\newcommand{\langEnglish}{English}
+
+\newcommand{\langSpanish}{Español}
+\newcommand{\langGerman}{Deutsch}
+\newcommand{\langVietnamese}{Tiếng Việt}
+\newcommand{\langRussian}{Русский}
+\newcommand{\langFrench}{Français}
+
+\newcommand{\langJapanese}{日本語}
+\newcommand{\langKorean}{한국어}
+\newcommand{\langTagalog}{Tagalog}
+\newcommand{\langArabic}{العربية}
+\newcommand{\langItalian}{Italiano}
+
+%% Multilingual phrase definitions
+
+\newcommand{\mcEnglish}{Merry Christmas}
+
+\newcommand{\mcSpanish}{Feliz Navidad}
+\newcommand{\mcGerman}{Fröhliche Weihnachten} % alt: {Frohe Weihnachten}
+\newcommand{\mcVietnamese}{Chúc Giáng Sinh Vui Vẻ} % alt: {Giáng Sinh Vui Vẻ}
+\newcommand{\mcRussian}{Счастливого Рождества} % alt: {Весёлого Рождества}
+\newcommand{\mcFrench}{Joyeux Noël}
+
+\newcommand{\mcJapanese}{メリークリスマス}
+\newcommand{\mcKorean}{메리 크리스마스} % alt: {즐거운 성탄절}
+\newcommand{\mcTagalog}{Malagayang Pasko}
+\newcommand{\mcArabic}{{مجيد} {ميلاد} {عيد}} % these are reversed for Reasons
+\newcommand{\mcItalian}{Buon Natale}
+
+% ------------------------------------------------------------------------------
+
+\begin{document}
+
+% ------------------------------------------------------------------------------
+
+\begin{frontcover}
+  % All on separate lines, for easy viewing
+  % \textenglish{\mcEnglish{}}
+
+  % \textspanish{\mcSpanish{}}
+
+  % \textgerman{\mcGerman{}}
+
+  % \textvietnamese{\mcVietnamese{}}
+
+  % \textrussian{\mcRussian{}}
+
+  % \textfrench{\mcFrench{}}
+
+  % {\japanesefont{}\mcJapanese{}}
+
+  % {\koreanfont{}\mcKorean{}}
+
+  % {\tagalogfont{}\mcTagalog{}}
+
+  % \textarabic{\mcArabic{}}
+
+  % \textitalian{\mcItalian{}}
+
+  %\vfill
+
+  % An alternate style of flake I was playing with
+  % \begin{tikzpicture}[l-system={step=1pt, order=7, angle=10}]
+  %   \pgfdeclarelindenmayersystem{flake}{
+  %     \symbol{M}{\pgflsystemdrawforward}
+  %     \symbol{R}{\pgflsystemdrawforward}
+  %     \symbol{L}{\pgflsystemdrawforward}
+  %     \rule{C -> HHHHHH}
+  %     \rule{6 -> ++++++}
+  %     \rule{H -> [B]6}
+  %     \rule{B -> M}
+  %     \rule{M -> M[------L][++++++R]M[------L][++++++R]M}
+  %     \rule{R -> R[++++R]M[++++R]-MM}
+  %     \rule{L -> L[----L]M[----L]+MM}
+  %   }
+  %   \draw l-system [l-system={flake, axiom=C}];
+  % \end{tikzpicture}
+
+  \begin{center}
+    \begin{tikzpicture}[l-system={step=1pt, order=5, angle=10}]
+      \pgfdeclarelindenmayersystem{flake}{
+        \symbol{M}{\pgflsystemdrawforward}
+        \symbol{R}{\pgflsystemdrawforward}
+        \symbol{L}{\pgflsystemdrawforward}
+        \rule{H -> [M]++++++}
+        \rule{M -> M[------L][++++++R]M[------R][++++++L]M}
+        \rule{R -> M-M-M-M}
+        \rule{L -> M+M+M+M}
+      }
+      \draw l-system [l-system={flake, axiom=HHHHHH}];
+
+      % It would be nice to make this more concise and clear,
+      % but I'm short on time.
+      \path
+      [postaction={decorate, decoration={text format delimiters={|}{|},
+          text along path, text align/align=center,
+          % text align/fit to path stretching spaces=true,
+          raise=-0.5\baselineskip, reverse path=true,
+          text align/left indent={1.25663706\panelwidth}, % 3/3 \pi * radius
+          text align/right indent={0.83775804\panelwidth}, % 2/3 \pi * radius
+          text={|\frenchfont|  \mcFrench{}}
+        }}]
+      [postaction={decorate, decoration={text format delimiters={|}{|},
+          text along path, text align/align=center,
+          % text align/fit to path stretching spaces=true,
+          raise=-0.5\baselineskip, reverse path=true,
+          text align/left indent={1.67551608\panelwidth}, % 4/3 \pi * radius
+          text align/right indent={0.41887902\panelwidth}, % 1/3 \pi * radius
+          text={|\koreanfont|  \mcKorean{}}
+        }}]
+      [postaction={decorate, decoration={text format delimiters={|}{|},
+          text along path, text align/align=center,
+          % text align/fit to path stretching spaces=true,
+          raise=-0.5\baselineskip, reverse path=true,
+          text align/left indent={2.0943951\panelwidth}, % 5/3 \pi * radius
+          text align/right indent={0\panelwidth}, % 0/3 \pi * radius
+          text={|\arabicfont|  \mcArabic{}}
+        }}]
+      [postaction={decorate, decoration={text format delimiters={|}{|},
+          text along path, text align/align=center,
+          % text align/fit to path stretching spaces=true,
+          raise=-0\baselineskip, reverse path=false,
+          text align/left indent={1.25663706\panelwidth}, % 3/3 \pi * radius
+          text align/right indent={0.83775804\panelwidth}, % 2/3 \pi * radius
+          text={|\spanishfont|  \mcSpanish{}}
+        }}]
+      [postaction={decorate, decoration={text format delimiters={|}{|},
+          text along path, text align/align=center,
+          % text align/fit to path stretching spaces=true,
+          raise=-0\baselineskip, reverse path=false,
+          text align/left indent={1.67551608\panelwidth}, % 4/3 \pi * radius
+          text align/right indent={0.41887902\panelwidth}, % 1/3 \pi * radius
+          text={|\tagalogfont|  \mcTagalog{}}
+        }}]
+      [postaction={decorate, decoration={text format delimiters={|}{|},
+          text along path, text align/align=center,
+          % text align/fit to path stretching spaces=true,
+          raise=-0\baselineskip, reverse path=false,
+          text align/left indent={2.0943951\panelwidth}, % 5/3 \pi * radius
+          text align/right indent={0\panelwidth}, % 0/3 \pi * radius
+          text={|\italianfont|  \mcItalian{}}
+        }}]
+      circle[radius=0.4\panelwidth];
+
+      \path
+      [postaction={decorate, decoration={text format delimiters={|}{|},
+          text along path, text align/align=center,
+          % text align/fit to path stretching spaces=true,
+          raise=-0.5\baselineskip, reverse path=true,
+          text align/left indent={1.413716693\panelwidth}, % 2/2 \pi * radius
+          text align/right indent={0.706858346\panelwidth}, % 1/2 \pi * radius
+          text={|\germanfont|  \mcGerman{}}
+        }}]
+      [postaction={decorate, decoration={text format delimiters={|}{|},
+          text along path, text align/align=center,
+          % text align/fit to path stretching spaces=true,
+          raise=-0.5\baselineskip, reverse path=true,
+          text align/left indent={2.120575039\panelwidth}, % 3/2 \pi * radius
+          text align/right indent={0\panelwidth}, % 0/2 \pi * radius
+          text={|\vietnamesefont|  \mcVietnamese{}}
+        }}]
+      [postaction={decorate, decoration={text format delimiters={|}{|},
+          text along path, text align/align=center,
+          % text align/fit to path stretching spaces=true,
+          raise=-0\baselineskip, reverse path=false,
+          text align/left indent={1.413716693\panelwidth}, % 2/2 \pi * radius
+          text align/right indent={0.706858346\panelwidth}, % 1/2 \pi * radius
+          text={|\japanesefont|  \mcJapanese{}}
+        }}]
+      [postaction={decorate, decoration={text format delimiters={|}{|},
+          text along path, text align/align=center,
+          % text align/fit to path stretching spaces=true,
+          raise=-0\baselineskip, reverse path=false,
+          text align/left indent={2.120575039\panelwidth}, % 3/2 \pi * radius
+          text align/right indent={0\panelwidth}, % 0/2 \pi * radius
+          text={|\englishfont|  \mcEnglish{}}
+        }}]
+      circle[radius=0.45\panelwidth] ;
+
+      \path
+      [postaction={decorate, decoration={text format delimiters={|}{|},
+          text along path, text align/align=center,
+          % text align/fit to path stretching spaces=true,
+          raise=-0\baselineskip, reverse path=false,
+          text align/left indent={1.570796325\panelwidth}, % \pi * radius
+          text align/right indent={0.0cm},
+          text={|\russianfont|  \mcRussian{}}
+        }}]
+      circle[radius=0.5\panelwidth] ;
+    \end{tikzpicture}
+  \end{center}
+
+  %\vfill
+\end{frontcover}
+
+% ------------------------------------------------------------------------------
+
+\begin{backcover}
+
+  \vfill
+
+  % (a) SpeakEasy doesn't have a consistent logo;
+  % (b) The logos for SpeakEasy and Portland State University are not in the
+  % public domain;
+  % Therefore those logos are not included.
+  \begin{center}
+    \small
+    SpeakEasy
+  \end{center}
+
+  \vfill
+
+  \footnotesize
+
+  % SpeakEasy brief and link
+  \begin{wrapfigure}[4]{r}{4\baselineskip}
+    \centering
+    \vspace{-1.4\baselineskip}
+    % http://speakeasy.wll.pdx.edu
+    \href{https://goo.gl/uoKYLW}{
+      \XeTeXLinkBox{
+        \qrcode[height=4\baselineskip]{https://goo.gl/uoKYLW}
+      }
+    }
+  \end{wrapfigure}
+  Designed on behalf of SpeakEasy, a student
+  entrepreneurship project within the Department of World Languages and
+  Literatures at Portland State University.
+  \hfill \href{http://speakeasy.wll.pdx.edu/}{speakeasy.wll.pdx.edu}
+  \\[0.5 em]
+
+  % Language Design
+  SpeakEasy products are a celebration of language. This card includes the most
+  widely spoken languages of residents in Portland, Oregon:
+  Arabic (\textarabic{\langArabic{}}),
+  English, % native language
+  French (\textfrench{\langFrench{}}),
+  German (\textgerman{\langGerman{}}),
+  Italian (\textitalian{\langItalian{}}),
+  Japanese ({\japanesefont{}\langJapanese{}}),
+  Korean ({\koreanfont{}\langKorean{}}),
+  Russian (\textrussian{\langRussian{}}),
+  Spanish (\textspanish{\langSpanish{}}),
+  Tagalog, % same in native language
+  Vietnamese (\textvietnamese{\langVietnamese{}}).
+  \\[0.5 em]
+
+  % Sustainability, Mr Ellie Pooh, and link to Mr. Ellie Pooh
+  % Modify this to suit the instantiated product!
+  \begin{wrapfigure}[4]{r}{4\baselineskip}
+    \centering
+    \vspace{-1.4\baselineskip}
+    % http://mrelliepooh.com/
+    \href{https://goo.gl/NXG25H}{
+      \XeTeXLinkBox{
+        \qrcode[height=4\baselineskip]{https://goo.gl/NXG25H}
+      }
+    }
+  \end{wrapfigure}
+  Printed on 100\% recycled paper by Mr. Ellie Pooh, at least 50\% recycled
+  elephant dung. This program supports conservation and human-elephant conflict
+  resolution in Sri Lanka. \hfill
+  \href{http://mrelliepooh.com/}{mrelliepooh.com}
+
+  \vfill
+
+  % About author; link to GitHub Repository with source and pdf
+  \begin{wrapfigure}[4]{r}{4\baselineskip}
+    \centering
+    \vspace{-1.4\baselineskip}
+    % https://github.com/mangorune/SpeakEasy/
+    \href{https://goo.gl/B62dF0}{
+      \XeTeXLinkBox{
+        \qrcode[height=4\baselineskip]{https://goo.gl/B62dF0}
+      }
+    }
+  \end{wrapfigure}
+  Author: Benjamin Johnson (mangorune)
+
+  \LaTeX{} source and PDF files % for mangorune's SpeakEasy products are
+  available on GitHub. % Modify to your needs.
+
+  \hfill
+  \href{https://github.com/mangorune/SpeakEasy/}{github.com/mangorune/SpeakEasy}
+
+  % Public Domain Dedication (CC0) with link to legal code.
+  \begin{center}
+    \resizebox{\panelwidth}{!}{\ccZeroNotice}
+  \end{center}
+\end{backcover}
+
+% ------------------------------------------------------------------------------
+
+\begin{insideleft}
+  % Maybe leave this entirely blank on real cards
+  % This is the insideleft panel. \\
+
+  % \setmainfont{Noto Sans} ``Noto Sans'' \\
+  % Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  % incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+  % nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  % consequat. \\
+
+  % \setmainfont{Source Sans Pro} ``Source Sans Pro'' \\
+  % Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  % incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+  % nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  % consequat. \\
+
+  % \setmainfont{Open Sans} ``Open Sans'' \\
+  % Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  % incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+  % nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  % consequat. \\
+
+  % \vfill
+
+  % bottom of panel
+\end{insideleft}
+
+% ------------------------------------------------------------------------------
+
+\begin{insideright}
+  % Maybe leave this entirely blank on real cards
+  % This is the insideright panel. \\
+
+  % \setmainfont{Noto Serif} ``Noto Serif'' \\
+  % Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  % incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+  % nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  % consequat. \\
+
+  % \setmainfont{Source Serif Pro} ``Source Serif Pro'' \\
+  % Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  % incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+  % nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  % consequat. \\
+
+  % \setmainfont{EB Garamond} ``EB Garamond'' \\
+  % Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  % incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+  % nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  % consequat. \\
+
+  % \vfill
+
+  % bottom of panel
+\end{insideright}
+
+% ------------------------------------------------------------------------------
+
+\end{document}
+
+% ------------------------------------------------------------------------------

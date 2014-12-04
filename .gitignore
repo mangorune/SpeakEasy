@@ -1,0 +1,8 @@
+# Ignore extra *TeX files
+*.aux
+*.log
+*.out
+*.synctex.gz
+
+# Ignore Emacs
+*.tex~
