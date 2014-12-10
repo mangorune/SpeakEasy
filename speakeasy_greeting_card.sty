@@ -1,4 +1,4 @@
-\ProvidesPackage{speakeasy_greeting_card}[2014/11/08 SpeakEasy Greeting Card]
+\ProvidesPackage{speakeasy_greeting_card}[2014/12/10 SpeakEasy Greeting Card]
 
 % This package provides common options used across greeting cards I create for
 % SpeakEasy as a part of "German in the Working World", taken Fall quarter 2014
@@ -70,15 +70,91 @@
 
 % Drop-in CC0 public domain dedication
 \newcommand{\ccZeroNotice}{
-  \begin{tabular}{m{1.8cm} m{6.75cm}}
-    \raisebox{-0.5\height}{
-      \href{https://creativecommons.org/publicdomain/zero/1.0/}{
-        \XeTeXLinkBox{\includegraphics[width=2cm]{cc-zero.png}}}}
-    &
-    \setmainfont{Noto Sans}\scriptsize
-    To the extent possible under law, the author(s) have waived
-    all copyright and related or neighboring rights to this work.
-  \end{tabular}
+  \begin{center}
+    \href{https://creativecommons.org/publicdomain/zero/1.0/}{
+      \XeTeXLinkBox{
+        \includegraphics[width=2cm]{cc-zero.png}
+      }
+    }
+  \end{center}
+  \begin{wrapfigure}[4]{r}{4\baselineskip}
+    \centering
+    \vspace{-1.4\baselineskip}
+    % https://creativecommons.org/publicdomain/zero/1.0/
+    \href{https://goo.gl/vooH7b}{
+      \XeTeXLinkBox{
+        \qrcode[height=4\baselineskip]{https://goo.gl/vooH7b}
+      }
+    }
+  \end{wrapfigure}
+
+  To the extent possible under law, the author(s) have waived
+  all copyright and related or neighboring rights to this work.
+
+  \hfill
+  \href{https://creativecommons.org/publicdomain/zero/1.0/}
+  {creativecommons.org/publicdomain/zero/1.0/}
+}
+
+% Drop-in project reference
+\newcommand{\githubReference}{
+  % About author; link to GitHub Repository with source and pdf
+  \vspace{\baselineskip}
+
+  \begin{wrapfigure}[2]{r}{4\baselineskip}
+    \centering
+    \vspace{-2.4\baselineskip}
+    % https://github.com/mangorune/SpeakEasy/
+    \href{https://goo.gl/B62dF0}{
+      \XeTeXLinkBox{
+        \qrcode[height=4\baselineskip]{https://goo.gl/B62dF0}
+      }
+    }
+  \end{wrapfigure}
+
+  Project materials available on GitHub.
+
+  \hfill
+  \href{https://github.com/mangorune/SpeakEasy/}
+  {github.com/mangorune/SpeakEasy}
+  \vspace{\baselineskip}
+}
+
+% Sustainability, Mr Ellie Pooh, and link to Mr. Ellie Pooh
+\newcommand{\elephantPaper}{
+\begin{wrapfigure}[4]{r}{4\baselineskip}
+    \centering
+    \vspace{-1.4\baselineskip}
+    % http://mrelliepooh.com/
+    \href{https://goo.gl/NXG25H}{
+      \XeTeXLinkBox{
+        \qrcode[height=4\baselineskip]{https://goo.gl/NXG25H}
+      }
+    }
+  \end{wrapfigure}
+  Printed on 100\% recycled paper by Mr. Ellie Pooh, at least 50\% recycled
+  elephant dung. This program supports conservation and human-elephant conflict
+  resolution in Sri Lanka.
+  \hfill
+  \href{http://mrelliepooh.com/}{mrelliepooh.com}
+}
+
+% SpeakEasy brief and link
+\newcommand{\aboutSpeakEasy}{
+  \begin{wrapfigure}[4]{r}{4\baselineskip}
+    \centering
+    \vspace{-1.4\baselineskip}
+    % http://speakeasy.wll.pdx.edu
+    \href{https://goo.gl/uoKYLW}{
+      \XeTeXLinkBox{
+        \qrcode[height=4\baselineskip]{https://goo.gl/uoKYLW}
+      }
+    }
+  \end{wrapfigure}
+  Designed on behalf of SpeakEasy, a student
+  entrepreneurship project within the Department of World Languages and
+  Literatures at Portland State University.
+  \hfill \href{http://speakeasy.wll.pdx.edu/}{speakeasy.wll.pdx.edu}
 }
 
 % ------------------------------------------------------------------------------

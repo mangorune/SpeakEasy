@@ -1,0 +1,93 @@
+\ProvidesPackage{simple_libre_typography}[2014/12/10 Simple Libre Typography]
+
+% This package provides settings for a simple type aesthetic using libre fonts.
+% Bug: Currently doesn't use libre CJK fonts!
+
+% ------------------------------------------------------------------------------
+
+% COPYRIGHT and LICENSE
+
+% Written in 2014 by Benjamin Johnson.
+
+% To the extent possible under law, the author(s) have dedicated all copyright
+% and related and neighboring rights to this source code to the public domain
+% worldwide. This source code is distributed without any warranty.
+
+% You should have received a copy of the CC0 Public Domain Dedication along with
+% this source code. If not, see
+% <http://creativecommons.org/publicdomain/zero/1.0/>.
+
+% ------------------------------------------------------------------------------
+
+\usepackage{polyglossia}
+
+\setdefaultlanguage{english}
+
+\setotherlanguage{spanish}
+\setotherlanguage{portuges}
+\setotherlanguage{german}
+\setotherlanguage{french}
+\setotherlanguage{vietnamese}
+\setotherlanguage{italian}
+
+% Filipino / Tagalog not supported by Polyglossia. Using generic fontspec macros
+
+\setotherlanguage{russian}
+
+% CJK not supported by Polyglossia.
+\usepackage{xeCJK}
+
+\setotherlanguage{arabic}
+
+%% Typeface choices
+
+\defaultfontfeatures{Ligatures={Common,TeX}}
+
+% Used by any language without another font defined
+\setmainfont{Noto Sans}
+
+% English
+% Used as default language for the document
+\newfontfamily\englishfont[Script=Latin]{Noto Sans}
+
+% Latin scripts, non-English
+
+\newfontfamily\spanishfont[Script=Latin]{Noto Sans}
+\newfontfamily\portuguesefont[Script=Latin]{Noto Sans}
+\newfontfamily\germanfont[Script=Latin]{Noto Sans}
+\newfontfamily\frenchfont[Script=Latin]{Noto Sans}
+\newfontfamily\vietnamesefont[Script=Latin]{Noto Sans}
+\newfontfamily\italianfont[Script=Latin]{Noto Sans}
+
+\newfontfamily\tagalogfont[Script=Latin]{Noto Sans}
+
+% Alphabetic scripts, non-Latin
+\newfontfamily\russianfont[Script=Cyrillic]{Noto Sans}
+
+% Left-to-Right scripts, non-alphabetic
+% (All these are Logographic / Syllabic)
+
+% These modern open source type families are not working due to bugs somewhere
+% in the *TeX pipeline.
+% \setCJKfamilyfont{zhrm}{Noto Sans S Chinese}
+% \setCJKfamilyfont{jarm}{Noto Sans Japanese}
+% \setCJKfamilyfont{korm}{Noto Sans Korean}
+% \setCJKfamilyfont{zhrm}{Source Han Sans CN}
+% \setCJKfamilyfont{jarm}{Source Han Sans JP}
+% \setCJKfamilyfont{korm}{Source Han Sans KR}
+
+\setCJKfamilyfont{zhrm}{DFKai-SB}
+\setCJKfamilyfont{jarm}{Yu Mincho}
+\setCJKfamilyfont{korm}{UnBatang}
+
+\newcommand\chinesefont{\CJKfamily{zhrm}\CJKnospace}
+\newcommand\japanesefont{\CJKfamily{jarm}\CJKnospace}
+\newcommand\koreanfont{\CJKfamily{korm}\CJKspace}
+
+% Right-to-Left scripts
+
+\newfontfamily\arabicfont[Script=Arabic]{Noto Naskh Arabic}
+
+% ------------------------------------------------------------------------------
+
+\endinput
