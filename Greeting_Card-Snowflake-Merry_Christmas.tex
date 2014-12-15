@@ -44,6 +44,37 @@
 %% Multilingual type selection
 \usepackage{./simple_libre_typography}
 
+% left indent, right indent, text
+\newcommand{\circTopText}[3]{%
+  [postaction={%
+    decorate,
+    decoration={%
+      text format delimiters={|}{|},
+      text along path, text align/align=center,
+      % text align/fit to path stretching spaces=true,
+      raise=-0.5\baselineskip, reverse path=true,
+      text align/left indent={#1},
+      text align/right indent={#2},
+      text={#3}
+    }
+  }]
+}
+\newcommand{\circBottomText}[3]{%
+  [postaction={%
+    decorate,
+    decoration={%
+      text format delimiters={|}{|},
+      text along path, text align/align=center,
+      % text align/fit to path stretching spaces=true,
+      raise=0\baselineskip, reverse path=false,
+      text align/left indent={#1},
+      text align/right indent={#2},
+      text={#3}
+    }
+  }]
+}
+
+
 % ------------------------------------------------------------------------------
 
 \begin{document}
@@ -74,7 +105,8 @@
   %   }
   %   \draw l-system [l-system={flake, axiom=C}];
   % \end{tikzpicture}
-
+  % \setlength{\hello}{1cm * \real{2.51327412} * \real{2}}
+  % \hello
   \begin{center}
     \begin{tikzpicture}[l-system={step=1pt, order=5, angle=10}]
       \pgfdeclarelindenmayersystem{flake}{
@@ -90,101 +122,35 @@
 
       % It would be nice to make this more concise and clear by generalizing it
       \path
-      [postaction={decorate, decoration={text format delimiters={|}{|},
-          text along path, text align/align=center,
-          % text align/fit to path stretching spaces=true,
-          raise=-0.5\baselineskip, reverse path=true,
-          text align/left indent={1.25663706\panelwidth}, % 3/3 \pi * radius
-          text align/right indent={0.83775804\panelwidth}, % 2/3 \pi * radius
-          text={|\frenchfont|  \mcFrench{}}
-        }}]
-      [postaction={decorate, decoration={text format delimiters={|}{|},
-          text along path, text align/align=center,
-          % text align/fit to path stretching spaces=true,
-          raise=-0.5\baselineskip, reverse path=true,
-          text align/left indent={1.67551608\panelwidth}, % 4/3 \pi * radius
-          text align/right indent={0.41887902\panelwidth}, % 1/3 \pi * radius
-          text={|\koreanfont|  \mcKorean{}}
-        }}]
-      [postaction={decorate, decoration={text format delimiters={|}{|},
-          text along path, text align/align=center,
-          % text align/fit to path stretching spaces=true,
-          raise=-0.5\baselineskip, reverse path=true,
-          text align/left indent={2.0943951\panelwidth}, % 5/3 \pi * radius
-          text align/right indent={0\panelwidth}, % 0/3 \pi * radius
-          text={|\arabicfont|  \mcArabic{}}
-        }}]
-      [postaction={decorate, decoration={text format delimiters={|}{|},
-          text along path, text align/align=center,
-          % text align/fit to path stretching spaces=true,
-          raise=-0\baselineskip, reverse path=false,
-          text align/left indent={1.25663706\panelwidth}, % 3/3 \pi * radius
-          text align/right indent={0.83775804\panelwidth}, % 2/3 \pi * radius
-          text={|\spanishfont|  \mcSpanish{}}
-        }}]
-      [postaction={decorate, decoration={text format delimiters={|}{|},
-          text along path, text align/align=center,
-          % text align/fit to path stretching spaces=true,
-          raise=-0\baselineskip, reverse path=false,
-          text align/left indent={1.67551608\panelwidth}, % 4/3 \pi * radius
-          text align/right indent={0.41887902\panelwidth}, % 1/3 \pi * radius
-          text={|\tagalogfont|  \mcTagalog{}}
-        }}]
-      [postaction={decorate, decoration={text format delimiters={|}{|},
-          text along path, text align/align=center,
-          % text align/fit to path stretching spaces=true,
-          raise=-0\baselineskip, reverse path=false,
-          text align/left indent={2.0943951\panelwidth}, % 5/3 \pi * radius
-          text align/right indent={0\panelwidth}, % 0/3 \pi * radius
-          text={|\italianfont|  \mcItalian{}}
-        }}]
+      \circTopText{1.25663706\panelwidth}{0.83775804\panelwidth}
+      {|\frenchfont| \mcFrench{}}
+      \circTopText{1.67551608\panelwidth}{0.41887902\panelwidth}
+      {|\koreanfont| \mcKorean{}}
+      \circTopText{2.0943951\panelwidth}{0\panelwidth}
+      {|\arabicfont| \mcArabic{}}
+      \circBottomText{1.25663706\panelwidth}{0.83775804\panelwidth}
+      {|\spanishfont| \mcSpanish{}}
+      \circBottomText{1.67551608\panelwidth}{0.41887902\panelwidth}
+      {|\tagalogfont|  \mcTagalog{}}
+      \circBottomText{2.0943951\panelwidth}{0\panelwidth}
+      {|\italianfont|  \mcItalian{}}
       circle[radius=0.4\panelwidth];
 
       \path
-      [postaction={decorate, decoration={text format delimiters={|}{|},
-          text along path, text align/align=center,
-          % text align/fit to path stretching spaces=true,
-          raise=-0.5\baselineskip, reverse path=true,
-          text align/left indent={1.413716693\panelwidth}, % 2/2 \pi * radius
-          text align/right indent={0.706858346\panelwidth}, % 1/2 \pi * radius
-          text={|\germanfont|  \mcGerman{}}
-        }}]
-      [postaction={decorate, decoration={text format delimiters={|}{|},
-          text along path, text align/align=center,
-          % text align/fit to path stretching spaces=true,
-          raise=-0.5\baselineskip, reverse path=true,
-          text align/left indent={2.120575039\panelwidth}, % 3/2 \pi * radius
-          text align/right indent={0\panelwidth}, % 0/2 \pi * radius
-          text={|\vietnamesefont|  \mcVietnamese{}}
-        }}]
-      [postaction={decorate, decoration={text format delimiters={|}{|},
-          text along path, text align/align=center,
-          % text align/fit to path stretching spaces=true,
-          raise=-0\baselineskip, reverse path=false,
-          text align/left indent={1.413716693\panelwidth}, % 2/2 \pi * radius
-          text align/right indent={0.706858346\panelwidth}, % 1/2 \pi * radius
-          text={|\japanesefont|  \mcJapanese{}}
-        }}]
-      [postaction={decorate, decoration={text format delimiters={|}{|},
-          text along path, text align/align=center,
-          % text align/fit to path stretching spaces=true,
-          raise=-0\baselineskip, reverse path=false,
-          text align/left indent={2.120575039\panelwidth}, % 3/2 \pi * radius
-          text align/right indent={0\panelwidth}, % 0/2 \pi * radius
-          text={|\englishfont|  \mcEnglish{}}
-        }}]
+      \circTopText{1.413716693\panelwidth}{0.706858346\panelwidth}
+      {|\germanfont|  \mcGerman{}}
+      \circTopText{2.120575039\panelwidth}{0\panelwidth}
+      {|\vietnamesefont|  \mcVietnamese{}}
+      \circBottomText{1.413716693\panelwidth}{0.706858346\panelwidth}
+      {|\japanesefont|  \mcJapanese{}}
+      \circBottomText{2.120575039\panelwidth}{0\panelwidth}
+      {|\englishfont|  \mcEnglish{}}
       circle[radius=0.45\panelwidth] ;
 
       \path
-      [postaction={decorate, decoration={text format delimiters={|}{|},
-          text along path, text align/align=center,
-          % text align/fit to path stretching spaces=true,
-          raise=-0\baselineskip, reverse path=false,
-          text align/left indent={1.570796325\panelwidth}, % \pi * radius
-          text align/right indent={0.0cm},
-          text={|\russianfont|  \mcRussian{}}
-        }}]
-      circle[radius=0.5\panelwidth] ;
+      \circBottomText{1.570796325\panelwidth}{0.0cm}
+      {|\russianfont|  \mcRussian{}}
+      circle[radius=\panelwidth * \real{0.5}] ;
     \end{tikzpicture}
   \end{center}
 
